@@ -25,7 +25,7 @@ const AddPet = () => {
       formData.append("image", image);
       
   
-      const response = await axios.post("https://api.imgbb.com/1/upload?key=055a245dd93198ad79e84b535cd64548", formData,{
+      const response = await axios.post("https://api.imgbb.com/1/upload?key=c05530fb8cd6caee0aaad0ffc146ce9a", formData,{
         headers:{
           'Content-Type':'multipart/form-data'
         }
@@ -126,7 +126,7 @@ console.log('img',url);
         };
         console.log('userEmailAddPet',user.email);
   
-        const response = await fetch("https://serversite-pet-adoption.vercel.app/pets", {
+        const response = await fetch("https://htm-2024-cc9r.vercel.app/pets", {
           method: "POST",
           headers: {
             "content-type": "application/json",
