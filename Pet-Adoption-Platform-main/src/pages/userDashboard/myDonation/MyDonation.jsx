@@ -32,7 +32,7 @@ const {user}=useContext(AuthContext);
    
 
     useEffect(() => {
-      fetch(`https://serversite-pet-adoption.vercel.app/payments`)
+      fetch(`https://htm-2024-server.vercel.app/payments`)
         .then(response => response.json())
         .then(data => {
           console.log('Fetched payments:', data);
@@ -60,7 +60,7 @@ const {user}=useContext(AuthContext);
           confirmButtonText: 'Yes, Remove it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`https://serversite-pet-adoption.vercel.app/payments/${_id}`, {
+            fetch(`https://htm-2024-server.vercel.app/payments/${_id}`, {
               method: 'DELETE',
             })
               .then(response => response.json())

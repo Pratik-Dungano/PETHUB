@@ -117,7 +117,7 @@ console.log('img',url);
           pause:false
         };
   
-        const response = await fetch("https://serversite-pet-adoption.vercel.app/adddonationcamp", {
+        const response = await fetch("https://htm-2024-server.vercel.app/adddonationcamp", {
           method: "POST",
           headers: {
             "content-type": "application/json",

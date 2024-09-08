@@ -10,7 +10,7 @@ const AllDonationCampAdmin = () => {
    
     const axiosSecure = useAxiosSecure();
     useEffect(() => {
-        fetch(`https://serversite-pet-adoption.vercel.app/adddonationcamp`)
+        fetch(`https://htm-2024-server.vercel.app/adddonationcamp`)
           .then((response) => response.json())
           .then((data) => {
             console.log('Fetched users:', data);
@@ -32,7 +32,7 @@ const AllDonationCampAdmin = () => {
           confirmButtonText: 'Yes, Delete it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`https://serversite-pet-adoption.vercel.app/adddonationcamp/${_id}`, {
+            fetch(`https://htm-2024-server.vercel.app/adddonationcamp/${_id}`, {
               method: 'DELETE',
             })
               .then(response => response.json())

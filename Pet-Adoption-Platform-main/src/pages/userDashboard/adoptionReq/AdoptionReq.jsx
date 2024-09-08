@@ -13,7 +13,7 @@ const AdoptionReq = () => {
   const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    fetch(`https://serversite-pet-adoption.vercel.app/addtoadopt`)
+    fetch(`https://htm-2024-server.vercel.app/addtoadopt`)
       .then(response => response.json())
       .then(data => {
         console.log('Fetched pets:', data);

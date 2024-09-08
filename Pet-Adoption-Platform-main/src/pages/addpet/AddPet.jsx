@@ -126,7 +126,7 @@ console.log('img',url);
         };
         console.log('userEmailAddPet',user.email);
   
-        const response = await fetch("https://htm-2024-cc9r.vercel.app/pets", {
+        const response = await fetch("https://htm-2024-server.vercel.app/pets", {
           method: "POST",
           headers: {
             "content-type": "application/json",

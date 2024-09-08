@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "@stripe/react-stripe-js": "^2.4.0",
-    "@stripe/stripe-js": "^2.2.0",
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^2.4.0",
     "@tanstack/react-query": "^5.8.9",
     "@tanstack/react-table": "^8.10.7",
     "@uiw/react-markdown-editor": "^6.0.0",

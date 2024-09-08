@@ -73,7 +73,7 @@ const AdoptPet = () => {
     // Close the modal before making the fetch request
     document.getElementById('my_modal_4').close();
 
-    fetch('https://serversite-pet-adoption.vercel.app/addtoadopt', {
+    fetch('https://htm-2024-server.vercel.app/addtoadopt', {
 
       method: 'POST',
       headers: {

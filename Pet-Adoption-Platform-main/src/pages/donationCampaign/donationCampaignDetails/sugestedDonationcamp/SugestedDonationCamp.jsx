@@ -5,7 +5,7 @@ const SugestedDonationCamp = () => {
     const [donationCamp, setDonationCamp] = useState([]);
     useEffect(() => {
          
-          fetch(`https://serversite-pet-adoption.vercel.app/adddonationcamp`, )
+          fetch(`https://htm-2024-server.vercel.app/adddonationcamp`, )
             .then(response => response.json())
             .then(data => setDonationCamp(data))
             .catch(error => console.error("Error fetching donation:", error));
