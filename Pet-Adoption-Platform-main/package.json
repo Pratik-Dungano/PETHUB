@@ -19,7 +19,7 @@
     "aos": "^2.3.4",
     "axios": "^1.6.2",
     "cloudinary-react": "^1.8.1",
-    "firebase": "^10.6.0",
+    "firebase": "^10.13.1",
     "formik": "^2.4.5",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",

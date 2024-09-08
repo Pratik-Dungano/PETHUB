@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "pet-adoption-platform-cc33e"
-  }
+    "default": "pet-adoption-platform-cc33e",
+    "pet-buddy": "pet-adoption-4b282"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

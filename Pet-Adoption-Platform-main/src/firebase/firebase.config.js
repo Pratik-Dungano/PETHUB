@@ -4,13 +4,15 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyD-c8Z6lkSQOEohRmngvJ1POK2q3sOcBI0",
-    authDomain: "pet-adoption-platform-cc33e.firebaseapp.com",
-    projectId: "pet-adoption-platform-cc33e",
-    storageBucket: "pet-adoption-platform-cc33e.appspot.com",
-    messagingSenderId: "295572274889",
-    appId: "1:295572274889:web:946f0389e3acdbb90d5718"
+  apiKey: "AIzaSyBPeoHQBhZBBTxCrl3AsSuI5PSNyEeV8mI",
+  authDomain: "pet-adoption-4b282.firebaseapp.com",
+  projectId: "pet-adoption-4b282",
+  storageBucket: "pet-adoption-4b282.appspot.com",
+  messagingSenderId: "318190938825",
+  appId: "1:318190938825:web:2c1eae7331ce3e60cbbb18",
+  measurementId: "G-08NEPTMTYR"
 };
 
 // Initialize Firebase
