@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../components/providers/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
 import Navbar from '../../../shared/navbar/Navbar';
 import Footer from '../../../shared/footer/Footer';
-import Chat from '../../chat/Chat';
 import { JitsiMeeting } from '@jitsi/react-sdk';
+import io from 'socket.io-client';
 
 const AdoptPet = () => {
   const details = useLoaderData();
@@ -15,7 +15,37 @@ const AdoptPet = () => {
   const [showChat, setShowChat] = useState(false);
   const [showVideoConference, setShowVideoConference] = useState(false);
 
+  // Chat state
+  const [socket, setSocket] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState('');
+
   const { _id, name, location, category, image, age, longdesp, shortdesp, userEmail } = details;
+
+  // Initialize Socket.io for chat
+  useEffect(() => {
+    if (showChat) {
+      const socketIo = io('http://localhost:5173/');
+      setSocket(socketIo);
+
+      socketIo.emit('join-room', _id);
+
+      socketIo.on('chat message', (msg) => {
+        setMessages((prevMessages) => [...prevMessages, msg]);
+      });
+
+      return () => {
+        socketIo.disconnect();
+      };
+    }
+  }, [showChat, _id]);
+
+  const handleSend = () => {
+    if (socket && message) {
+      socket.emit('chat message', { roomId: _id, text: message, sender: user?.displayName });
+      setMessage('');
+    }
+  };
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -160,8 +190,32 @@ const AdoptPet = () => {
           </div>
         </div>
 
-        {showChat && <Chat roomId={_id} userName={user?.displayName} />}
+        {/* Chat Section */}
+        {showChat && (
+          <div style={styles.chatBoxContainer}>
+            <div style={styles.chatBox}>
+              <h3>Chat with Owner</h3>
+              <div style={styles.messageContainer}>
+                {messages.map((msg, index) => (
+                  <div key={index} style={styles.message}>
+                    <strong>{msg.sender}: </strong>
+                    <span>{msg.text}</span>
+                  </div>
+                ))}
+              </div>
+              <input
+                type="text"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Type a message"
+                style={styles.input}
+              />
+              <button onClick={handleSend} style={styles.button}>Send</button>
+            </div>
+          </div>
+        )}
 
+        {/* Video Conference Section */}
         {showVideoConference && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
             <div className="bg-white p-4 rounded-lg shadow-lg max-w-full w-full lg:w-3/4">
@@ -183,20 +237,64 @@ const AdoptPet = () => {
                 getIFrameRef={(iframeRef) => {
                   iframeRef.style.height = '500px';
                 }}
-              />
-              <button
-                className="btn mt-4 bg-red-500"
-                onClick={() => setShowVideoConference(false)}
-              >
-                Close Video Call
-              </button>
-            </div>
+            />
+            <button
+              className="btn mt-4 bg-red-500"
+              onClick={() => setShowVideoConference(false)}
+            >
+              Close Video Call
+            </button>
           </div>
-        )}
-      </div>
-      <Footer />
+        </div>
+      )}
     </div>
-  );
+    <Footer />
+  </div>
+);
+};
+
+const styles = {
+chatBoxContainer: {
+  position: 'fixed',
+  bottom: '20px',
+  right: '20px',
+  zIndex: 1000,
+},
+chatBox: {
+  width: '300px',
+  height: '400px',
+  backgroundColor: '#fff',
+  border: '1px solid #ccc',
+  borderRadius: '8px',
+  padding: '10px',
+  boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+},
+messageContainer: {
+  flex: 1,
+  overflowY: 'scroll',
+  paddingBottom: '10px',
+},
+message: {
+  marginBottom: '10px',
+},
+input: {
+  padding: '10px',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  marginBottom: '10px',
+  width: '100%',
+},
+button: {
+  padding: '10px',
+  backgroundColor: '#007BFF',
+  color: '#fff',
+  borderRadius: '5px',
+  border: 'none',
+  cursor: 'pointer',
+},
 };
 
 export default AdoptPet;
