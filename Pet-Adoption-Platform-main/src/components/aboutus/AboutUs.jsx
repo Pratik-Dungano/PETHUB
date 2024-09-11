@@ -1,5 +1,4 @@
-import { BsFillBarChartFill, BsFillBriefcaseFill } from 'react-icons/bs';
-import { BiAtom } from 'react-icons/bi';
+import { FaRss, FaShip, FaHeart } from 'react-icons/fa';
 
 import contact from '../../../../assets/pets.jpg';
 import aboutus from '../../../../assets/aboutus.jpg';
@@ -18,7 +17,7 @@ const AboutUs = () => {
           <div className="px-10 py-10 w-full lg:max-w-[1200px] mx-auto">
             <div className="flex gap-16 items-center justify-center">
               <div>
-                <BsFillBarChartFill className="text-3xl text-warning" />
+                <FaRss className="text-3xl text-warning" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Our Vision</h1>
@@ -28,8 +27,7 @@ const AboutUs = () => {
             {/* */}
             <div className="flex gap-16 items-center justify-center my-10">
               <div>
-                <BiAtom className="text-3xl  text-success" />
-              </div>
+              <FaShip className="text-3xl text-success mb-4" />              </div>
               <div>
                 <h1 className="text-2xl font-bold">Our Mission</h1>
                 <p>PetHub's mission is to build a thriving community of pet lovers. We provide a safe and reliable platform for pet adoption, fostering meaningful connections between pets and their new families.</p>
@@ -38,7 +36,7 @@ const AboutUs = () => {
             {/* */}
             <div className="flex gap-16 items-center justify-center">
               <div>
-                <BsFillBriefcaseFill className="text-3xl  text-red-600" />
+              <FaHeart className="text-3xl text-red-600 mb-4" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Our Values</h1>
