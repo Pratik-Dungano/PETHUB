@@ -27,10 +27,10 @@ const DonationCampaignDetails = () => {
   <div className="p-6 lg:border-l-2 border-none border-pink-700 ml-10">
     <h6
       className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-      Last Donation Time:{last_donation_date}
+      Duration :{last_donation_date}
     </h6>
     <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-     Max Donation Amount:{max_donation_limit}
+     Charges/day:{max_donation_limit}
     </h4>
     <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
      About:{shortdesp}
@@ -38,9 +38,9 @@ const DonationCampaignDetails = () => {
     <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
      {longdesp}
     </p>
-    <button disabled={pause} className="btn disabled:cursor-not-allowed bg-pink-700" onClick={()=>document.getElementById('my_modal_5').showModal()}>
-       Donate Now<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          strokeWidth="2" className="w-4 h-4">
+    <button disabled={pause} className="btn disabled:cursor-not-allowed  font-bold   mt-2   text-[#D52B5C] bg-white"> 
+       Contact Now<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          strokeWidth="2x" className="w-4 h-4">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
         </svg></button>
 
@@ -78,7 +78,7 @@ const DonationCampaignDetails = () => {
   </div>
 </div>  
 <div className='flex flex-col items-center justify-center text-3xl font-bold mt-10'><h3>_Suggested For You_</h3>
-<p className='text-xl bg-green-500 px-6 py-2 mt-4 rounded-md'>Donate More</p></div>
+<p className='text-xl bg-green-500 px-6 py-2 mt-4 rounded-md'>Explore more</p></div>
 <SugestedDonationCamp></SugestedDonationCamp>
 <Footer></Footer>
         </div>

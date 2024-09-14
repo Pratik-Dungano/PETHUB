@@ -62,7 +62,7 @@ const Navbar = ({ children }) => {
                   }>Pet Listing</NavLink></li>
                   <li><NavLink to="/donationcampaign" className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-[#D52B5C] px-6 py-2   underline-offset-8 hover:text-red  " : ""
-                  }>Donation Campaigns</NavLink></li>
+                  }>Pet CareTaker</NavLink></li>
                  
     
     </>
@@ -99,7 +99,7 @@ const Navbar = ({ children }) => {
               <div className="flex gap-20">
                <div className="flex  items-center gap-7">
                <div className="  w-16"> <img src={logo}  alt="" /></div>
-              <div className="  text-2xl font-bold ">FourPows</div>
+              <div className="  text-2xl font-bold ">PetHub</div>
                </div>
               <div className="flex-none hidden lg:block">
                 <ul className="flex gap-7">
