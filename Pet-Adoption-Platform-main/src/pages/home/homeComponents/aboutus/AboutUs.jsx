@@ -10,7 +10,7 @@ const AboutUs = () => {
 
       <div className="relative z-10 text-white py-16">
         <div className="flex flex-col items-center justify-center mt-20 mb-20" id="services">
-          <h3 className="text-[#ff0000]">Know about us</h3>
+          <h3 className="text-[#ff0000]">Do you know me</h3>
           <h1 className="text-white text-2xl md:text-4xl font-metamorphous font-bold text-center">About PetHub</h1>
         </div>
         <div className="flex items-center justify-center">
