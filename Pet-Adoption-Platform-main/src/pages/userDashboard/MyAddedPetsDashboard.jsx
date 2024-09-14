@@ -51,7 +51,7 @@ const MyAddedPetsDashboard = () => {
   <>
   <div className="flex flex-col items-center mb-5">
                <div className=" bg-white rounded-full p-5 w-24"> <img src={logo}  alt="" /></div>
-              <div className="  text-2xl font-bold ">FourPows</div>
+              <div className="  text-2xl font-bold ">PetHub</div>
                </div>
     {isAdmin && (
       <>
