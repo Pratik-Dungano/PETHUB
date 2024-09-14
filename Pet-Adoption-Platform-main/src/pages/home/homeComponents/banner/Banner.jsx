@@ -34,7 +34,8 @@ const Banner = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src={ban2} className="w-6/12 rounded-lg " />
     <div>
-      <h1 className="text-xl lg:text-6xl font-bold text-black"><span className='text-[#ff0000]'></span> Embrace Compassion: Rescue a Pet, Change a Life!</h1>
+      <h1 className="text-xl lg:text-6xl font-bold text-black"><span className='text-[#ff0000]'></span> Every pet deserves a loving home. Be that home.
+      !</h1>
       <p className="py-6 text-sm lg:text-xl">Make a difference in the world by opening your heart and home to a shelter animal. </p>
       {/* <button className="btn btn-primary">Get Started</button> */}
     </div>
@@ -48,7 +49,7 @@ const Banner = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src={ban3} className="w-6/12 rounded-lg " />
     <div>
-      <h1 className="text-xl lg:text-6xl font-bold text-black"><span className='text-[#ff0000]'></span> Discover Unconditional Love: Adopt a Pet Today! </h1>
+      <h1 className="text-xl lg:text-6xl font-bold text-black"><span className='text-[#ff0000]'></span> Be a foster hero. Provide a safe space for a pet in need.      </h1>
       <p className="py-6 text-sm lg:text-xl">Find your perfect companion and bring joy to your home by choosing adoption over buying. </p>
       {/* <button className="btn btn-primary">Get Started</button> */}
     </div>
