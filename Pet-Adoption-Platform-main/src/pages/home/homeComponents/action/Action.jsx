@@ -11,9 +11,9 @@ const Action = () => {
             <hr className='text-[#d42a5c]'/>
             <hr />
                <div className=''>
-               <p className='text-6xl'>Save A Pet</p>
+               <p className='text-6xl'>Want to Adopt?</p>
                <div className='flex items-center'>
-               <p className='text-3xl font-bold my-3'>DONATE NOW</p>
+               <p className='text-3xl font-bold my-3'>WISH GRANTED</p>
                <BiSolidDonateHeart className='w-10 h-10 text-[#d42a5c]'></BiSolidDonateHeart>
                </div>
                </div>
