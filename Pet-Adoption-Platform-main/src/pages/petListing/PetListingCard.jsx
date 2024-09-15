@@ -17,7 +17,7 @@ const PetListingCard = ({card}) => {
     <p>{category}</p>
     <p>Added Time:{addedDate}</p>
     <div className="card-actions justify-end">
-    <Link to={`../adoptpet/${_id}`}> <button className="btn btn-primary">View Details</button></Link> 
+    <Link to={`../adoptpet/${_id}`}> <button className="btn bg-yellow-700 bg-opacity-60 border-yellow-700 text-white btn-primary">View Details</button></Link> 
     </div>
   </div>
 </div>
