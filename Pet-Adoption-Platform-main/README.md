@@ -25,6 +25,6 @@ This project is a comprehensive pet adoption platform that allows users to conne
 - Implemented JSON Web Tokens (JWT) for secure user authentication and authorization.
 
 ## Live Site
-[Visit the live site here](https://pet-adoption-platform-cc33e.web.app/)
+[Visit the live site here](https://htm-2024-cc9r.vercel.app/)
 ## Server Site Github Repository 
-[Visit Repository here](https://github.com/Rahidapriya/Pet-Adoption-Platform-Servers-Site) 
+[Visit Repository here](https://github.com/Pratik-Dungano/HTM2024/) 

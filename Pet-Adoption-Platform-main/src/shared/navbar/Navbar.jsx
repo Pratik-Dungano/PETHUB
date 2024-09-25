@@ -55,13 +55,13 @@ const Navbar = ({ children }) => {
 
     const navLinks=<>
     <li className=" "><NavLink to="/" className={({ isActive, isPending }) =>
-                    isPending ? "pending " : isActive ? " text-[#fff] font-bold  rounded-3xl bg-[#D52B5C] px-6 py-2 underline-offset-8  hover:text-red " : ""
+                    isPending ? "pending " : isActive ? " text-[#fff] font-bold  rounded-3xl bg-yellow-700 px-6 py-2 underline-offset-8  hover:text-red " : ""
                   }>Home</NavLink></li>
     <li><NavLink to="/petlisting" className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-[#D52B5C] px-6 py-2   underline-offset-8 hover:text-red  " : ""
+                    isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-yellow-700 px-6 py-2   underline-offset-8 hover:text-red  " : ""
                   }>Pet Listing</NavLink></li>
                   <li><NavLink to="/donationcampaign" className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-[#D52B5C] px-6 py-2   underline-offset-8 hover:text-red  " : ""
+                    isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-yellow-700 px-6 py-2   underline-offset-8 hover:text-red  " : ""
                   }>Pet CareTaker</NavLink></li>
                  
     
@@ -130,7 +130,7 @@ const Navbar = ({ children }) => {
         <div className="dropdown dropdown-end">
   {
     user&& <div><label tabIndex={0} className=" m-1"> <MdArrowDropDown></MdArrowDropDown></label>
-    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow  rounded-box lg:w-72 lg:h-72 border-2 bg-pink-50" style={{ borderColor: '#D52B5C' }}>
+    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow  rounded-box lg:w-72 lg:h-72 border-2 bg-yellow-700" style={{ borderColor: '#D52B5C' }}>
 
       {/*  */}
     <div className="flex flex-col items-center justify-center mb-6">
@@ -176,8 +176,8 @@ const Navbar = ({ children }) => {
         <div className="hidden lg:flex  ">
         <CiLogin className="text-2xl"></CiLogin>
       {
-        user?<button onClick={handleSignOut} className="btn btn-sm md:btn-md border text-white bg-[#D52B5C] border-white-2 ">Log Out</button>
-        :   <Link to='/login'> <button className="py-2 text-white bg-[#D52B5C] px-6 border border-white-2 border-none lg:ml-5 rounded-sm">Login</button></Link>
+        user?<button onClick={handleSignOut} className="btn btn-sm md:btn-md border text-white bg-yellow-700 border-white-2 ">Log Out</button>
+        :   <Link to='/login'> <button className="py-2 text-white bg-yellow-700 px-6 border border-white-2 border-none lg:ml-5 rounded-sm">Login</button></Link>
       }
       </div>
               {/*  */}
